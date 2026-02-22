@@ -1,0 +1,46 @@
+rules_version='2'
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Order submissions from the public bakery website.
+    // Clients can only CREATE new orders — no reading, updating, or deleting.
+    match /orderRequests/{orderId} {
+      allow create: if
+        // Require expected top-level fields
+        request.resource.data.keys().hasAll(['customer', 'items', 'total', 'status', 'createdAt'])
+        // Validate customer map
+        && request.resource.data.customer is map
+        && request.resource.data.customer.keys().hasAll(['name', 'phone', 'email', 'message'])
+        && request.resource.data.customer.name is string
+        && request.resource.data.customer.name.size() > 0
+        && request.resource.data.customer.name.size() <= 200
+        && request.resource.data.customer.phone is string
+        && request.resource.data.customer.phone.size() > 0
+        && request.resource.data.customer.phone.size() <= 30
+        && request.resource.data.customer.email is string
+        && request.resource.data.customer.email.size() > 0
+        && request.resource.data.customer.email.size() <= 320
+        && request.resource.data.customer.message is string
+        && request.resource.data.customer.message.size() <= 1000
+        // Validate items list
+        && request.resource.data.items is list
+        && request.resource.data.items.size() > 0
+        && request.resource.data.items.size() <= 50
+        // Validate total
+        && request.resource.data.total is number
+        && request.resource.data.total > 0
+        // Status must be "pending" on creation
+        && request.resource.data.status == "pending"
+        // createdAt must be a server timestamp
+        && request.resource.data.createdAt == request.time;
+
+      allow read, update, delete: if false;
+    }
+
+    // Deny access to all other collections by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
