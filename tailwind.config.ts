@@ -22,6 +22,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          charcoal: "hsl(var(--primary-charcoal))",
+          black: "hsl(var(--primary-black))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

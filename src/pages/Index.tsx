@@ -5,7 +5,7 @@ import CustomerForm from "@/components/CustomerForm";
 import { toast } from "@/hooks/use-toast";
 import { db } from "@/lib/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/culinaryarsonistlogo.png";
 import treslechesImg from "@/assets/tresleches.png";
 import applepierollImg from "@/assets/appliepieroll.png";
 import cookiebutterrollImg from "@/assets/cookiebutterroll.png";
@@ -231,11 +231,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-gradient-to-b from-pink-100 to-white py-6">
+      <header className="bg-gradient-to-b from-[#7e0800] to-black py-6">
         <div className="container mx-auto px-4 flex flex-col items-center">
           <img
             src={logo}
-            alt="Ho-Made Baked Goods by Sarah"
+            alt="Culinary Arsonist"
             className="h-40 md:h-56 w-auto mb-4"
           />
           <p className="text-lg text-primary">Order your favorite baked goods online</p>
@@ -267,8 +267,8 @@ const Index = () => {
           <div className="space-y-6">
             <OrderSummary items={desserts} />
             
-            <div className="bg-card rounded-lg p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-accent mb-4">Your Information</h3>
+            <div className="bg-primary rounded-lg p-6 shadow-lg">
+              <h3 className="text-xl font-bold text-white mb-4">Your Information</h3>
               <CustomerForm
                 name={name}
                 phone={phone}
@@ -291,8 +291,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-6 mt-12">
         <div className="container mx-auto px-4 text-center flex flex-col items-center gap-3">
-          <img src={logo} alt="Ho-Made Baked Goods by Sarah" className="h-16 w-auto" />
-          <p className="opacity-90">© 2026 Ho-Made Baked Goods by Sarah. All rights reserved.</p>
+          <img src={logo} alt="Culinary Arsonist" className="h-16 w-auto" />
+          <p className="opacity-90">© 2026 Culinary Arsonist. All rights reserved.</p>
         </div>
       </footer>
     </div>

@@ -40,12 +40,12 @@ const DessertCard = ({
       </div>
       <CardContent className="p-4 text-center">
         <h3 className="font-semibold text-foreground mb-1">{name}</h3>
-        <p className="text-primary font-bold text-lg mb-3">${price.toFixed(2)}</p>
+        <p className="text-accent font-bold text-lg mb-3">${price.toFixed(2)}</p>
         <div className="flex items-center justify-center gap-3">
           <Button
             variant="outline"
             size="icon"
-            className="h-8 w-8 rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="h-8 w-8 rounded-full border-accent text-accent hover:bg-accent hover:text-accent-foreground"
             onClick={handleDecrease}
             disabled={quantity === 0}
           >
@@ -55,7 +55,7 @@ const DessertCard = ({
           <Button
             variant="outline"
             size="icon"
-            className="h-8 w-8 rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            className="h-8 w-8 rounded-full border-accent text-accent hover:bg-accent hover:text-accent-foreground"
             onClick={handleIncrease}
           >
             <Plus className="h-4 w-4" />

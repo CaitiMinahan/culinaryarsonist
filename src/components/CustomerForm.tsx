@@ -40,19 +40,19 @@ const CustomerForm = ({
     <div className="space-y-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="name" className="text-foreground">Name *</Label>
+          <Label htmlFor="name" className="text-white">Name *</Label>
           <Input
             id="name"
             placeholder="Your full name"
             value={name}
             onChange={(e) => onNameChange(e.target.value)}
             onBlur={() => onBlur("name")}
-            className={`bg-card border-border ${errors.name ? "border-destructive" : ""}`}
+            className={`bg-[#4a0500] border-[#4a0500] text-white placeholder:text-gray-400 ${errors.name ? "border-destructive" : ""}`}
           />
           {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
         </div>
         <div className="space-y-2">
-          <Label htmlFor="phone" className="text-foreground">Phone Number *</Label>
+          <Label htmlFor="phone" className="text-white">Phone Number *</Label>
           <Input
             id="phone"
             type="tel"
@@ -60,13 +60,13 @@ const CustomerForm = ({
             value={phone}
             onChange={(e) => onPhoneChange(e.target.value)}
             onBlur={() => onBlur("phone")}
-            className={`bg-card border-border ${errors.phone ? "border-destructive" : ""}`}
+            className={`bg-[#4a0500] border-[#4a0500] text-white placeholder:text-gray-400 ${errors.phone ? "border-destructive" : ""}`}
           />
           {errors.phone && <p className="text-sm text-destructive">{errors.phone}</p>}
         </div>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="email" className="text-foreground">Email *</Label>
+        <Label htmlFor="email" className="text-white">Email *</Label>
         <Input
           id="email"
           type="email"
@@ -74,24 +74,24 @@ const CustomerForm = ({
           value={email}
           onChange={(e) => onEmailChange(e.target.value)}
           onBlur={() => onBlur("email")}
-          className={`bg-card border-border ${errors.email ? "border-destructive" : ""}`}
+          className={`bg-[#4a0500] border-[#4a0500] text-white placeholder:text-gray-400 ${errors.email ? "border-destructive" : ""}`}
         />
         {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
       </div>
       <div className="space-y-2">
-        <Label htmlFor="message" className="text-foreground">Special Requests</Label>
+        <Label htmlFor="message" className="text-white">Special Requests</Label>
         <Textarea
           id="message"
           placeholder="Any special requests or notes for your order..."
           value={message}
           onChange={(e) => onMessageChange(e.target.value)}
-          className="bg-card border-border min-h-[100px]"
+          className="bg-[#4a0500] border-[#4a0500] text-white placeholder:text-gray-400 min-h-[100px]"
         />
       </div>
       <Button
         onClick={onSubmit}
         disabled={!isValid}
-        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6 text-lg"
+        className="w-full bg-[#4a0500] border-2 border-white hover:bg-[#2a0300] !text-white font-semibold py-6 text-lg transition-colors"
       >
         SUBMIT ORDER
       </Button>

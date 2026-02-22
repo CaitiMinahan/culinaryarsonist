@@ -8,89 +8,86 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 330 30% 97%;
-    --foreground: 330 30% 15%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 93%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 330 30% 15%;
+    --card: 0 0% 22%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 330 30% 15%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 93%;
 
-    --primary: 330 80% 55%;
+    --primary: 4 100% 25%;
     --primary-foreground: 0 0% 100%;
+    --primary-charcoal: 0 0% 20%;
+    --primary-black: 0 0% 0%;
 
-    --secondary: 330 40% 92%;
-    --secondary-foreground: 330 30% 15%;
+    --secondary: 12 72% 59%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 330 20% 94%;
-    --muted-foreground: 330 15% 45%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 330 75% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 47 98% 45%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 330 25% 85%;
-    --input: 330 25% 85%;
-    --ring: 330 80% 55%;
+    --border: 0 0% 30%;
+    --input: 0 0% 12%;
+    --ring: 4 100% 25%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 17 72% 21%;
+    --sidebar-foreground: 17 20% 93%;
+    --sidebar-primary: 4 100% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 17 50% 28%;
+    --sidebar-accent-foreground: 17 20% 93%;
+    --sidebar-border: 17 40% 30%;
+    --sidebar-ring: 47 98% 45%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 17 30% 6%;
+    --foreground: 17 20% 93%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 17 30% 8%;
+    --card-foreground: 17 20% 93%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 17 30% 8%;
+    --popover-foreground: 17 20% 93%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 12 72% 59%;
+    --primary-foreground: 17 30% 6%;
+    --primary-charcoal: 0 0% 20%;
+    --primary-black: 0 0% 0%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 17 40% 16%;
+    --secondary-foreground: 17 20% 93%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 17 20% 14%;
+    --muted-foreground: 17 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 47 98% 45%;
+    --accent-foreground: 17 30% 6%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 17 20% 18%;
+    --input: 17 20% 18%;
+    --ring: 12 72% 59%;
+    --sidebar-background: 17 30% 6%;
+    --sidebar-foreground: 17 20% 93%;
+    --sidebar-primary: 12 72% 59%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 17 25% 12%;
+    --sidebar-accent-foreground: 17 20% 93%;
+    --sidebar-border: 17 20% 18%;
+    --sidebar-ring: 47 98% 45%;
   }
 }
 
@@ -100,6 +97,9 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 50%, hsl(0 0% 0%) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 }

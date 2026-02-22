@@ -1,15 +1,17 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAoI8J1PxGDsEMuIKIf-HJnLcAXpznjSdc",
-  authDomain: "ho-madebakedgoodsbysarah.firebaseapp.com",
-  projectId: "ho-madebakedgoodsbysarah",
-  storageBucket: "ho-madebakedgoodsbysarah.firebasestorage.app",
-  messagingSenderId: "283714735969",
-  appId: "1:283714735969:web:c94ca17030c005e01cff20",
-  measurementId: "G-GL7X6JMDE7"
+  apiKey: "AIzaSyD3KSOkTlPx_9XiSF1ME1SfEjkyxhzxGuc",
+  authDomain: "culinaryarsonist-7f704.firebaseapp.com",
+  projectId: "culinaryarsonist-7f704",
+  storageBucket: "culinaryarsonist-7f704.firebasestorage.app",
+  messagingSenderId: "51431384198",
+  appId: "1:51431384198:web:d44c8b48ce9f20eb741d07",
+  measurementId: "G-8MWCT4FPBD"
 };
 
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+export const analytics = getAnalytics(app);
 export const db = getFirestore(app);

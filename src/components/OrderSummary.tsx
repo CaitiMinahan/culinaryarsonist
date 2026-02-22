@@ -19,40 +19,40 @@ const OrderSummary = ({ items }: OrderSummaryProps) => {
   );
 
   return (
-    <Card className="border-0 shadow-lg bg-card">
+    <Card className="border-0 shadow-lg bg-primary">
       <CardHeader className="pb-4">
-        <CardTitle className="text-xl font-bold text-accent">Order Summary</CardTitle>
+        <CardTitle className="text-xl font-bold text-white">Order Summary</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         {selectedItems.length === 0 ? (
-          <p className="text-muted-foreground text-sm">No items selected yet</p>
+          <p className="text-white/70 text-sm">No items selected yet</p>
         ) : (
           <>
             {selectedItems.map((item) => (
               <div
                 key={item.id}
-                className="flex items-center justify-between py-2 border-b border-border last:border-0"
+                className="flex items-center justify-between py-2 border-b border-white/20 last:border-0"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-primary" />
+                  <div className="w-3 h-3 rounded-full bg-accent" />
                   <div>
-                    <p className="font-medium text-foreground">{item.name}</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-medium text-white">{item.name}</p>
+                    <p className="text-sm text-white/70">
                       Qty: {item.quantity}
                     </p>
                   </div>
                 </div>
-                <p className="font-semibold text-primary">
+                <p className="font-semibold text-accent">
                   ${(item.price * item.quantity).toFixed(2)}
                 </p>
               </div>
             ))}
           </>
         )}
-        <div className="pt-4 border-t border-border">
+        <div className="pt-4 border-t border-white/20">
           <div className="flex justify-between items-center">
-            <span className="font-bold text-lg text-foreground">TOTAL PRICE:</span>
-            <span className="font-bold text-xl text-primary">
+            <span className="font-bold text-lg text-white">TOTAL PRICE:</span>
+            <span className="font-bold text-xl text-accent">
               ${totalPrice.toFixed(2)}
             </span>
           </div>
