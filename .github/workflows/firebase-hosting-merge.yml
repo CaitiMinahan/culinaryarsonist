@@ -15,6 +15,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HO_MADEBAKEDGOODSBYSARAH }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CULINARYARSONIST_7F704 }}
           channelId: live
-          projectId: ho-madebakedgoodsbysarah
+          projectId: culinaryarsonist-7f704
