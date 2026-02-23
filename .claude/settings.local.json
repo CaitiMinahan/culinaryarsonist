@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git config:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(cd /c/Users/minah/Documents/culinaryarsonist && gh run list --limit 10 2>&1)"
     ]
   }
 }
