@@ -40,19 +40,19 @@ const CustomerForm = ({
     <div className="space-y-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="name" className="text-white">Name *</Label>
+          <Label htmlFor="name" className="text-black">Name *</Label>
           <Input
             id="name"
             placeholder="Your full name"
             value={name}
             onChange={(e) => onNameChange(e.target.value)}
             onBlur={() => onBlur("name")}
-            className={`bg-[#4a0500] border-[#4a0500] text-white placeholder:text-gray-400 ${errors.name ? "border-destructive" : ""}`}
+            className={`bg-white border-gray-300 text-black placeholder:text-gray-400 ${errors.name ? "border-destructive" : ""}`}
           />
           {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
         </div>
         <div className="space-y-2">
-          <Label htmlFor="phone" className="text-white">Phone Number *</Label>
+          <Label htmlFor="phone" className="text-black">Phone Number *</Label>
           <Input
             id="phone"
             type="tel"
@@ -60,13 +60,13 @@ const CustomerForm = ({
             value={phone}
             onChange={(e) => onPhoneChange(e.target.value)}
             onBlur={() => onBlur("phone")}
-            className={`bg-[#4a0500] border-[#4a0500] text-white placeholder:text-gray-400 ${errors.phone ? "border-destructive" : ""}`}
+            className={`bg-white border-gray-300 text-black placeholder:text-gray-400 ${errors.phone ? "border-destructive" : ""}`}
           />
           {errors.phone && <p className="text-sm text-destructive">{errors.phone}</p>}
         </div>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="email" className="text-white">Email *</Label>
+        <Label htmlFor="email" className="text-black">Email *</Label>
         <Input
           id="email"
           type="email"
@@ -74,18 +74,18 @@ const CustomerForm = ({
           value={email}
           onChange={(e) => onEmailChange(e.target.value)}
           onBlur={() => onBlur("email")}
-          className={`bg-[#4a0500] border-[#4a0500] text-white placeholder:text-gray-400 ${errors.email ? "border-destructive" : ""}`}
+          className={`bg-white border-gray-300 text-black placeholder:text-gray-400 ${errors.email ? "border-destructive" : ""}`}
         />
         {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
       </div>
       <div className="space-y-2">
-        <Label htmlFor="message" className="text-white">Special Requests</Label>
+        <Label htmlFor="message" className="text-black">Special Requests</Label>
         <Textarea
           id="message"
           placeholder="Any special requests or notes for your order..."
           value={message}
           onChange={(e) => onMessageChange(e.target.value)}
-          className="bg-[#4a0500] border-[#4a0500] text-white placeholder:text-gray-400 min-h-[100px]"
+          className="bg-white border-gray-300 text-black placeholder:text-gray-400 min-h-[100px]"
         />
       </div>
       <Button

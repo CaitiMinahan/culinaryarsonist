@@ -19,25 +19,25 @@ const OrderSummary = ({ items }: OrderSummaryProps) => {
   );
 
   return (
-    <Card className="border-0 shadow-lg bg-primary">
+    <Card className="border-0 shadow-lg bg-white">
       <CardHeader className="pb-4">
-        <CardTitle className="text-xl font-bold text-white">Order Summary</CardTitle>
+        <CardTitle className="text-xl font-bold text-black">Order Summary</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         {selectedItems.length === 0 ? (
-          <p className="text-white/70 text-sm">No items selected yet</p>
+          <p className="text-black/70 text-sm">No items selected yet</p>
         ) : (
           <>
             {selectedItems.map((item) => (
               <div
                 key={item.id}
-                className="flex items-center justify-between py-2 border-b border-white/20 last:border-0"
+                className="flex items-center justify-between py-2 border-b border-black/20 last:border-0"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-accent" />
                   <div>
-                    <p className="font-medium text-white">{item.name}</p>
-                    <p className="text-sm text-white/70">
+                    <p className="font-medium text-black">{item.name}</p>
+                    <p className="text-sm text-black/70">
                       Qty: {item.quantity}
                     </p>
                   </div>
@@ -49,9 +49,9 @@ const OrderSummary = ({ items }: OrderSummaryProps) => {
             ))}
           </>
         )}
-        <div className="pt-4 border-t border-white/20">
+        <div className="pt-4 border-t border-black/20">
           <div className="flex justify-between items-center">
-            <span className="font-bold text-lg text-white">TOTAL PRICE:</span>
+            <span className="font-bold text-lg text-black">TOTAL PRICE:</span>
             <span className="font-bold text-xl text-accent">
               ${totalPrice.toFixed(2)}
             </span>

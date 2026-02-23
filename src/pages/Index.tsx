@@ -20,6 +20,8 @@ import lemonraspberryloafImg from "@/assets/lemonraspberryloaf.png";
 import lemonblueberryloafImg from "@/assets/lemonblueberryloaf.png";
 import peanutbutterchunkcookieImg from "@/assets/peanutbutterchunkcookie.png";
 import oatmealchocolatechipcookieImg from "@/assets/oatmealchocolatechipcookies.png";
+import freshbrisketImg from "@/assets/brisket1.png";
+import frozenbrisketImg from "@/assets/brisket2.png";
 
 interface Dessert {
   id: string;
@@ -32,98 +34,16 @@ interface Dessert {
 const initialDesserts: Dessert[] = [
   {
     id: "1",
-    name: "Cinnamon Rolls: Tres Leches",
-    price: 9.00,
-    image: treslechesImg,
+    name: "Whole Premium Grass Fed Finished Brisket (6.5-7.5 lbs)",
+    price: 275.00,
+    image: freshbrisketImg,
     quantity: 0,
   },
   {
     id: "2",
-    name: "Cinnamon Rolls: Apple Pie",
-    price: 11.00,
-    image: applepierollImg,
-    quantity: 0,
-  },
-  {
-    id: "3",
-    name: "Cinnamon Rolls: Cookie Butter",
-    price: 11.00,
-    image: cookiebutterrollImg,
-    quantity: 0,
-  },
-  {
-    id: "4",
-    name: "Cinnamon Rolls: Blueberry Cobbler",
-    price: 11.00,
-    image: blueberrycobblerrollImg,
-    quantity: 0,
-  },
-  {
-    id: "5",
-    name: "Cinnamon Rolls: Strawberry Shortcake",
-    price: 11.00,
-    image: strawberryshortcakerollImg,
-    quantity: 0,
-  },
-  // {
-  //   id: "6",
-  //   name: "Scones: Blueberry",
-  //   price: 4.00,
-  //   image: blueberrysconeImg,
-  //   quantity: 0,
-  // },
-  // {
-  //   id: "7",
-  //   name: "Scones: Raspberry White Chocolate",
-  //   price: 4.00,
-  //   image: raspberrywhitechocolatesconeImg,
-  //   quantity: 0,
-  // },
-  {
-    id: "6",
-    name: "Muffins: Banana Chocolate Chip",
-    price: 3.00,
-    image: bananachocchipmuffinImg,
-    quantity: 0,
-  },
-  {
-    id: "7",
-    name: "Muffins: Lemon Raspberry",
-    price: 3.00,
-    image: lemonraspberrymuffinsImg,
-    quantity: 0,
-  },
-  {
-    id: "8",
-    name: "Loaf: Pumpkin Crumble Cake",
-    price: 14.00,
-    image: pumpkincrumbcakeImg,
-    quantity: 0,
-  },
-  {
-    id: "9",
-    name: "Loaf: Lemon Raspberry",
-    price: 14.00,
-    image: lemonraspberryloafImg,
-    quantity: 0,
-  },{
-    id: "10",
-    name: "Loaf: Lemon Blueberry",
-    price: 14.00,
-    image: lemonblueberryloafImg,
-    quantity: 0,
-  },
-  {
-    id: "11",
-    name: "Cookies: Peanut Butter Chunk",
-    price: 4.00,
-    image: peanutbutterchunkcookieImg,
-    quantity: 0,
-  },{
-    id: "12",
-    name: "Cookies: Oatmeal Chocolate Chip",
-    price: 4.00,
-    image: oatmealchocolatechipcookieImg,
+    name: "1/3 Premium Grass Fed Finished Brisket - Frozen (2-2.5 lbs)",
+    price: 100.00,
+    image: frozenbrisketImg,
     quantity: 0,
   },
 ];
@@ -231,14 +151,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-gradient-to-b from-[#7e0800] to-black py-6">
+      <header className="bg-gradient-to-b from-gray-600 to-black py-6">
         <div className="container mx-auto px-4 flex flex-col items-center">
           <img
             src={logo}
             alt="Culinary Arsonist"
             className="h-40 md:h-56 w-auto mb-4"
           />
-          <p className="text-lg text-primary">Order your favorite baked goods online</p>
+          <p className="text-lg text-yellow-400">Order your favorite baked goods online</p>
         </div>
       </header>
 
@@ -267,8 +187,8 @@ const Index = () => {
           <div className="space-y-6">
             <OrderSummary items={desserts} />
             
-            <div className="bg-primary rounded-lg p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-white mb-4">Your Information</h3>
+            <div className="bg-white rounded-lg p-6 shadow-lg">
+              <h3 className="text-xl font-bold text-black mb-4">Your Information</h3>
               <CustomerForm
                 name={name}
                 phone={phone}
